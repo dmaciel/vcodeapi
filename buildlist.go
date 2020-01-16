@@ -4,8 +4,6 @@ import (
 	"errors"
 	"io/ioutil"
 	"net/http"
-	"net/url"
-	"strings"
 
 	"github.com/brian1917/vcodeHMAC"
 )
