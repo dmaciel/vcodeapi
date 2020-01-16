@@ -8,7 +8,7 @@ import (
 	"github.com/brian1917/vcodeHMAC"
 )
 
-func buildList(credsFile, appID string) ([]byte, error) {
+func BuildList(credsFile, appID string) ([]byte, error) {
 
 	// Create HTTP client and request
 	client := http.Client{}

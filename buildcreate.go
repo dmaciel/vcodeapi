@@ -44,7 +44,7 @@ func buildCreate(credsFile, appID string, version string) ([]byte, error) {
 		return nil, err
 	}
 	if resp.Status != "200 OK" {
-		return nil, errors.New("getbuildlist.do call error: " + resp.Status)
+		return nil, errors.New("buildCreate.do call error: " + resp.Status)
 	}
 
 	// Return data and nil error
