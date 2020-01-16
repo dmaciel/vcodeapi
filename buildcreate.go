@@ -19,7 +19,7 @@ func BuildCreate(credsFile, appID string, version string) ([]byte, error) {
 
 	// Create HTTP client and request
 	client := http.Client{}
-	req, err := http.NewRequest("POST", "https://analysiscenter.veracode.com/api/5.0/createBuild.do",
+	req, err := http.NewRequest("POST", "https://analysiscenter.veracode.com/api/5.0/createbuild.do",
 		strings.NewReader(form.Encode()))
 	if err != nil {
 		return nil, err
