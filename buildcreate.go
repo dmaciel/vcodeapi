@@ -10,7 +10,7 @@ import (
 	"github.com/brian1917/vcodeHMAC"
 )
 
-func buildCreate(credsFile, appID string, version string) ([]byte, error) {
+func BuildCreate(credsFile, appID string, version string) ([]byte, error) {
 
 	// Create HTTP form
 	form := url.Values{}
