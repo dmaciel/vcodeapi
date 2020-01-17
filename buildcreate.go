@@ -12,15 +12,9 @@ import (
 
 func BuildCreate(credsFile, appID string, version string) ([]byte, error) {
 
-	// Create HTTP form
-	form := url.Values{}
-	form.Add("app_id", appID)
-	form.Add("version", version)
-
 	// Create HTTP client and request
 	client := http.Client{}
-	req, err := http.NewRequest("POST", "https://analysiscenter.veracode.com/api/5.0/createbuild.do",
-		strings.NewReader(form.Encode()))
+	req, err := http.NewRequest("GET", "https://analysiscenter.veracode.com/api/5.0/createbuild.do?app_id="+appID+"&version="+version, nil)
 	if err != nil {
 		return nil, err
 	}
